@@ -3,7 +3,7 @@ console.log('hello world')
 const fruits = ['apple','orange','banana','stawberry']
 fruits.forEach(item=>item)
 
-document.getElementById('nightBtn').addEventListener('click', (event) => {
+document.getElementById('clickFruit').addEventListener('click', (event) => {
   let fruits_list = ['apple','orange','banana','stawberry']
   let x=Math.floor(Math.random()*fruits_list);
   console.log(x)
