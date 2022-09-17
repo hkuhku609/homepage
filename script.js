@@ -41,6 +41,12 @@ function getWords(type) {
     return arr[randomInt(arr.length)]
   }
   
+  document.getElementById('helloworld').addEventListener('click', (event) => {
+    let element_list = document.getElementById('list');
+    element_list.innerText = 'i am fine';
+
+  
+  });
   
   
   document.getElementById('nightBtn').addEventListener('click', (event) => {
