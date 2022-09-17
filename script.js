@@ -1,5 +1,15 @@
 console.log('hello world')
 
+const fruits = ['apple','orange','banana','stawberry']
+fruits.forEach(item=>item)
+
+document.getElementById('nightBtn').addEventListener('click', (event) => {
+  let fruits_list = ['apple','orange','banana','stawberry']
+  let x=Math.floor(Math.random()*fruits_list);
+console.log(x)
+
+});
+
 function getWords(type) {
     // Return words of a given type, or all words if type is 'WORD'
     let words = [
