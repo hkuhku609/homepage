@@ -6,7 +6,7 @@ fruits.forEach(item=>item)
 document.getElementById('nightBtn').addEventListener('click', (event) => {
   let fruits_list = ['apple','orange','banana','stawberry']
   let x=Math.floor(Math.random()*fruits_list);
-console.log(x)
+  console.log(x)
 
 });
 
