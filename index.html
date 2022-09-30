@@ -1,48 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myPage</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Susan's homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
   </head>
   <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nextnav">
+          <div class="nav--title whitebox">Susan</div>
+          <div class="nav--link" style="display: none">
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#shopping">Shopping Cart</a>
+            <a href="#comment">Comment</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <button id="click" onclick="toggleHideShow()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
     <main>
-      <header class="c-site-header">
-        <nav aria-label="Main Site Links."><h1>Welcome my HomePage</h1></nav>
-      </header>
+      <section id="home">
+        <h1 class="title whitebg">Hi. I am Susan.</h1>
+        <h3 class="whitebg">Welcome to my homepage!</h3>
+      </section>
+      <section id="about">
+        <h1 class="title whitebg">About Susan</h1>
+        <div class="about--container">
+          <div class="img">
+            <img src="./img/about.jpg" alt="" />
+          </div>
+          <div class="whitebg">
+            <p>
+              Since I was exposed to coding in the past, I became interested in
+              coding, and now I am trying to change the industry and become an
+              IT developer within 1 year. I keep practicing and practicing, and
+              my ultimate goal is to become a software engineer. Now I'm going
+              to start my coding journey.
+            </p>
+            <p></p>
 
-      <article class="myInfo">
-        <h4>Hi. I am Shuk Ting Kwong.</h4>
-        <p>
-          I am a deaf person who came to the UK on a BNO visa from last October.
-          In the past, I was very interested in coding because of my exposure to
-          coding, which met many of my requirements, such as reducing errors and
-          automation. Therefore, I hope that I can make a smooth transition to
-          the UK and devote myself to the industry of developers. My visa can
-          work and study without any sponsorship. My interests are learning and
-          reading. Right now I'm going all in on a full stack developer.My
-          favorite animal is a pig. Sometimes I watch piggy videos.
-        </p>
-      </article>
-      <article class="article2">
-        <h3>Piggy</h3>
-        <iframe
-          src="https://www.youtube.com/embed/I9RE3o2ZR7c"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <img
-          src="https://www.rd.com/wp-content/uploads/2021/03/GettyImages-586714878.jpg"
-          alt="piggy"
-        />
-      </article>
-
-      <footer class="c-site-footer">Code by Shuk Ting Kwong</footer>
+            <p>
+              As a developer, I can start by talking to the client in need to
+              understand what he needs. If he wants to build a new feature or a
+              new product, talk to him about what features are most needed and
+              what results he wants. Because I want to help clients earn the
+              benefits they want.
+            </p>
+            <p></p>
+            <p>
+              If he wants me to fix a problem, such as the product is defective
+              or a feature is no longer available, discuss with him what needs
+              to be improved. Because I want to help clients reduce unnecessary
+              losses.
+            </p>
+            <p></p>
+            <p>
+              In order to better play the function of CYF Block, the theme of
+              this website is fruit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <div class="product--title whitebox">
+          <h1>Products carousel</h1>
+        </div>
+        <div class="products--container">
+          <button
+            id="prev"
+            class="arrow"
+            style="left: 0; transform: translate(50%, 0)"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div id="images"></div>
+          <button
+            id="next"
+            class="arrow"
+            style="right: 0; transform: translate(-50%, 0)"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section id="shopping">
+        <h1 class="title whitebg">Shopping Cart</h1>
+        <div class="shoppingcart--container">
+          <div class="shoppingcart--leftside whitebg">
+            <div class="shoppingcart-leftproduct">
+              🥝 £<span id="kiwiCost">1</span>/each
+            </div>
+            <div class="shoppingcart-leftproduct">
+              🥥 £<span id="cocoCost">2</span>/each
+            </div>
+            <div class="shoppingcart-leftproduct">
+              🫐 £<span id="blueCost">3</span>/100g
+            </div>
+          </div>
+          <div class="shoppingcart--rightside whitebg">
+            <div id="cartContainer">
+              <hr />
+              <div class="line">
+                <div>🥝 x <span id="kiwiQty">0</span></div>
+                <div>
+                  <button id="kiwi_addCart" class="cart--btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button id="kiwi_minCart" class="cart--btn">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <button class="clear--btn" id="kiwiClear">Clear</button>
+                </div>
+                <div>£<span id="kiwi_amount">0</span></div>
+              </div>
+              <div class="line">
+                <div>🥥 x <span id="cocoQty">0</span></div>
+                <div>
+                  <button id="coco_addCart" class="cart--btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button id="coco_minCart" class="cart--btn">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <button class="clear--btn" id="cocoClear">Clear</button>
+                </div>
+                <div>£<span id="coco_amount">0</span></div>
+              </div>
+              <div class="line">
+                <div>🫐 x <span id="blueQty">0</span></div>
+                <div>
+                  <button id="blue_addCart" class="cart--btn">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button id="blue_minCart" class="cart--btn">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <button class="clear--btn" id="blueClear">Clear</button>
+                </div>
+                <div>£<span id="blue_amount">0</span></div>
+              </div>
+              <hr />
+              <div class="total">
+                <span>£</span><span id="carttotal">0</span>
+              </div>
+            </div>
+            <div>
+              <button id="clear" class="clear--btn">Order</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="comment">
+        <h1 class="title whitebg">Comment</h1>
+        <div class="comment--container">
+          <form class="form--container">
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <textarea name="message" rows="10" placeholder="Comment"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="title whitebg">Contact</h1>
+        <div class="icons whitebg">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <span class="icon">
+            <i class="fa-brands fa-github"></i>
+          </span>
+          <span class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+        </div>
+      </section>
     </main>
+    <footer>Code by Susan</footer>
     <script src="script.js"></script>
   </body>
 </html>

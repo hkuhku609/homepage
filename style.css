@@ -1,57 +1,355 @@
-/* =================
-  WRITE YOUR CSS HERE.
-  Check the ⌄ for help with formatting and validating your code.
-  You must write some CSS to complete this challenge.
-   ===================
-*/
-html,
-body {
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
   margin: 0;
-  height: 100%;
+  padding: 0;
   box-sizing: border-box;
 }
-main {
-  width: 600px;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Roboto;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  background-image: url(https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg);
+  background-position: center center;
+  background-size: 100%;
+  /* background-color: #000; */
+  /* background: linear-gradient(rgb(255, 82, 82), rgb(255, 196, 196)); */
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+.nextnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.nav--link {
+  gap: 30px;
+  margin-right: 0;
+}
+.nav button {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#click i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+nav a {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.nav--title {
+  font-size: 2.5rem;
+}
+
+.whitebox {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+/* section */
+.title {
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bolder;
+}
+#home {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+#about {
+  height: calc(100vh);
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgb(255, 223, 223), rgb(255, 123, 0));
+}
+div > p {
+  margin-bottom: 10px;
+}
+.about--container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  width: 60%;
+  gap: 20px;
+}
+.about--container img {
+  width: 100%;
+}
+#products {
+  height: calc(100vh);
+  /* padding: 100px 100px 0px 100px; */
+  padding-top: 100px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    11deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  position: relative;
+}
+.product--title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  color: #fff;
+}
+.products--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products--container button {
+  font-size: 5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#images {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#shopping {
+  height: calc(100vh);
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(161, 34, 195);
+  background: linear-gradient(
+    212deg,
+    rgba(161, 34, 195, 1) 0%,
+    rgba(166, 216, 78, 1) 58%,
+    rgba(45, 157, 253, 1) 100%
+  );
+}
+.shoppingcart--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+.shoppingcart--leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shoppingcart-leftproduct {
+  width: 100%;
+  height: 100%;
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart--btn {
+  background-color: rgba(255, 255, 255);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 1rem;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 30px;
+}
+.clear--btn {
+  background-color: rgba(255, 255, 255);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 1rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+hr {
+  border: 1px solid black;
+}
+.cart--btn > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingcart--rightside {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cartContainer {
+  position: relative;
+  display: flex;
   flex-direction: column;
 }
-img {
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total {
+  text-align: right;
+}
+#comment {
+  height: calc(100vh);
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
   width: 100%;
+  height: 100%;
+  background: rgb(131, 58, 180);
+  background: rgb(219, 166, 255);
+  background: radial-gradient(
+    circle,
+    rgba(219, 166, 255, 1) 0%,
+    rgba(142, 174, 255, 1) 50%,
+    rgba(79, 252, 69, 1) 100%
+  );
 }
-.myInfo {
-  text-align: center;
-  margin-bottom: 10%;
-  border: solid 1px pink;
-  border-top: none;
-  background-color: rgb(255, 239, 242);
+.comment--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100%;
 }
-.article2 {
-  text-align: center;
-}
-iframe {
+.form--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 315px;
-  border: 0;
+  height: 100%;
 }
-.c-site-header {
-  background: linear-gradient(to right, blue, pink);
-  color: #fff;
+#comment input[type="text"] {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+#comment input[type="email"] {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+textarea {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 100%;
+  font-family: Roboto;
+  margin-bottom: 5px;
+}
+.form--container > button[type="submit"] {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 100%;
+  background-color: rgb(197, 197, 197);
+}
+#contact {
+  height: calc(100vh);
+  padding: 100px;
+  width: 100%;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.icon i {
+  font-size: 10rem;
+}
+.icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+footer {
   text-align: center;
-  border-radius: 5px 5px 0 0;
-  margin-top: 5px;
-}
-.c-site-footer {
   background-color: #000;
   color: #fff;
-  text-align: center;
+  padding-top: 5px;
+  /* position: sticky;
+  bottom: 0;
+  z-index: 99; */
 }
-
-
-/* don't edit this */
-.jest-lite-report__status--pass {
-  background: var(--color-pass);
+.whitebg {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
 }
-.jest-lite-report__errors { display:none }
